@@ -1,0 +1,6 @@
+#!/bin/sh
+
+path="$HOME/Wallpapers/"
+file=$( ls $path | sort -R | tail -1 )
+wallpaper="$path/$file"
+feh --no-fehbg --bg-fill $wallpaper &

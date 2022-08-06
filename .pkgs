@@ -6,6 +6,7 @@ exa
 fish
 python-pip
 starship
+neovim
 
 - Pip
 psutil

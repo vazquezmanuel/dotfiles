@@ -68,6 +68,15 @@ def primary_widgets():
 
         separator(),
 
+        # Do not activate in Virtualbox - will break qtile
+        # widget.ThermalSensor(),
+
+        # widget.Battery(),
+
+        # widget.CPUGraph(),
+
+        # widget.Memory(),
+
         powerline('color4', 'dark'),
 
         icon(bg="color4", text=' '), # Icon: nf-fa-download

@@ -1,7 +1,3 @@
-# Antonio Sarosi
-# https://youtube.com/c/antoniosarosi
-# https://github.com/antoniosarosi/dotfiles
-
 # Multimonitor support
 
 from libqtile.config import Screen
@@ -16,11 +12,6 @@ def status_bar(widgets):
 
 
 screens = [Screen(top=status_bar(primary_widgets()))]
-
-# This is for my setup only, which has 3 different resolution monitors
-# screens = [Screen(top=status_bar(secondary_widgets()))]
-# screens.append(Screen(top=status_bar(secondary_widgets())))
-# screens.append(Screen(top=bar.Bar(primary_widgets(), 39, opacity=0.8))) # 4K Monitor
 
 xrandr = "xrandr | grep -w 'connected' | cut -d ' ' -f 2 | wc -l"
 

@@ -1,12 +1,8 @@
-# Antonio Sarosi
-# https://youtube.com/c/antoniosarosi
-# https://github.com/antoniosarosi/dotfiles
-
 # Qtile workspaces
 
 from libqtile.config import Key, Group
 from libqtile.command import lazy
-from .keys import mod, keys
+from .keys import mod, alt, keys
 
 
 # Get the icons at https://www.nerdfonts.com/cheat-sheet (you need a Nerd Font)
@@ -21,7 +17,7 @@ from .keys import mod, keys
 # nf-mdi-layers
 
 groups = [Group(i) for i in [
-    "   ", "   ", "   ", "   ", "  ", "   ", "   ", "   ", "   ",
+    "   ", "   ", "   ", "   ", "   ", "   ",
 ]]
 
 for i, group in enumerate(groups):
@@ -30,5 +26,7 @@ for i, group in enumerate(groups):
         # Switch to workspace N
         Key([mod], actual_key, lazy.group[group.name].toscreen()),
         # Send window to workspace N
-        Key([mod, "shift"], actual_key, lazy.window.togroup(group.name))
+        Key([mod, "shift"], actual_key, lazy.window.togroup(group.name)),
+        # Send window to workspace N and follow moved window to workspace
+        Key([alt], actual_key, lazy.window.togroup(group.name), lazy.group[group.name].toscreen()),
     ])

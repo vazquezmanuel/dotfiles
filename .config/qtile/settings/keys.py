@@ -1,7 +1,3 @@
-# Antonio Sarosi
-# https://youtube.com/c/antoniosarosi
-# https://github.com/antoniosarosi/dotfiles
-
 # Qtile keybindings
 
 from libqtile.config import Key
@@ -9,6 +5,7 @@ from libqtile.command import lazy
 
 
 mod = "mod4"
+alt = "mod1"
 
 keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ Window Configs ------------
@@ -19,20 +16,26 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "h", lazy.layout.left()),
     ([mod], "l", lazy.layout.right()),
 
-    # Change window sizes (MonadTall)
-    ([mod, "shift"], "l", lazy.layout.grow()),
-    ([mod, "shift"], "h", lazy.layout.shrink()),
+    # Flip layout for monadtall/monadwide
+    ([mod, "shift"], "f", lazy.layout.flip()),
+
+    # Change window sizes
+    ([alt], "j", lazy.layout.shrink()),
+    ([alt], "k", lazy.layout.grow()),
 
     # Toggle floating
-    ([mod, "shift"], "f", lazy.window.toggle_floating()),
+    ([mod, "shift"], "space", lazy.window.toggle_floating()),
 
     # Move windows up or down in current stack
+    ([mod, "shift"], "h", lazy.layout.shuffle_left()),
+    ([mod, "shift"], "l", lazy.layout.shuffle_right()),
     ([mod, "shift"], "j", lazy.layout.shuffle_down()),
     ([mod, "shift"], "k", lazy.layout.shuffle_up()),
 
     # Toggle between different layouts as defined below
     ([mod], "Tab", lazy.next_layout()),
     ([mod, "shift"], "Tab", lazy.prev_layout()),
+    ([mod], "f", lazy.window.toggle_fullscreen()),
 
     # Kill window
     ([mod], "w", lazy.window.kill()),
@@ -44,9 +47,9 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Restart Qtile
     ([mod, "control"], "r", lazy.restart()),
 
-    ([mod, "control"], "q", lazy.shutdown()),
+    ([mod, "control"], "x", lazy.shutdown()),
 
-    ([mod], "x", lazy.spawn("arcolinux-logout")),
+    ([mod], "q", lazy.spawn("archlinux-logout")),
 
     # ------------ App Configs ------------
 
@@ -57,39 +60,32 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod, "shift"], "m", lazy.spawn("rofi -show")),
 
     # Browser
-    ([mod], "b", lazy.spawn("brave")),
+    ([mod], "b", lazy.spawn("firefox")),
 
     # File Explorer
-    ([mod], "e", lazy.spawn("pcmanfm")),
+    ([mod], "e", lazy.spawn("thunar")),
 
     # Terminal
     ([mod], "Return", lazy.spawn("alacritty")),
 
     # Redshift
-    ([mod], "r", lazy.spawn("redshift -O 2400")),
+    ([mod], "r", lazy.spawn("redshift -O 3000")),
     ([mod, "shift"], "r", lazy.spawn("redshift -x")),
 
     # Screenshot
-    ([mod], "s", lazy.spawn("scrot")),
-    ([mod, "shift"], "s", lazy.spawn("scrot -s")),
-
-    # 4K Monitor
-    ([mod, "shift"], "b", lazy.spawn("brave --force-device-scale-factor=1.5")),
-    ([mod, "shift"], "c", lazy.spawn("code --force-device-scale-factor=1.5")),
-
+    ([], "Print", lazy.spawn("scrot")),
+    ([mod], "Print", lazy.spawn("scrot -s")),
 
     # ------------ Hardware Configs ------------
 
-    # Volume
-    ([], "XF86AudioLowerVolume", lazy.spawn(
-        "pactl set-sink-volume @DEFAULT_SINK@ -5%"
-    )),
-    ([], "XF86AudioRaiseVolume", lazy.spawn(
-        "pactl set-sink-volume @DEFAULT_SINK@ +5%"
-    )),
-    ([], "XF86AudioMute", lazy.spawn(
-        "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-    )),
+    # Audio
+    ([], "XF86AudioLowerVolume", lazy.spawn("pamixer --decrease 5")),
+    ([], "XF86AudioRaiseVolume", lazy.spawn("pamixer --increase 5")),
+    ([], "XF86AudioMute", lazy.spawn("pamixer --toggle-mute")),
+    ([], "XF86AudioPlay", lazy.spawn("playerctl play-pause")),
+    ([], "XF86AudioStop", lazy.spawn("playerctl stop")),
+    ([], "XF86AudioNext", lazy.spawn("playerctl next")),
+    ([], "XF86AudioPrev", lazy.spawn("playerctl previous")),
 
     # Brightness
     ([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),

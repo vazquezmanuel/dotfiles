@@ -13,6 +13,9 @@ def base(fg='text', bg='dark'):
 def separator():
     return widget.Sep(**base(), linewidth=0, padding=5)
 
+def line():
+    return widget.Sep(**base(fg='grey'), linewidth=1, padding=5)
+
 
 def icon(fg='text', bg='dark', fontsize=16, text="?"):
     return widget.TextBox(
@@ -62,20 +65,41 @@ def workspaces(icon_fontsize=19, window_name_font_size=14):
     ]
 
 
+def system():
+    return [
+        icon(fg="color3", text=''), # Icon: nf-fa-download
+
+        # Do not activate in Virtualbox - will break qtile
+        widget.ThermalSensor(**base(fg='color3')),
+
+        line(),
+
+        widget.CPU(
+            **base(fg='color2'),
+            format=" {load_percent}%",
+            mouse_callbacks={
+                "Button1": lambda: qtile.cmd_spawn(my_term + " -e ytop"),
+            },
+            update_interval=1.0),
+        
+        line(),
+        
+        widget.Memory(
+            **base(fg='color1'),
+            format="﬙ {MemUsed:.0f} MB",
+            update_interval=1.0),
+
+        separator(),
+    ]
+
+
 def primary_widgets():
     return [
         *workspaces(),
 
         separator(),
 
-        # Do not activate in Virtualbox - will break qtile
-        # widget.ThermalSensor(),
-
-        # widget.Battery(),
-
-        # widget.CPUGraph(),
-
-        # widget.Memory(),
+        *system(),
 
         powerline('color4', 'dark'),
 
@@ -95,7 +119,9 @@ def primary_widgets():
 
         icon(bg="color3", text=' '),  # Icon: nf-fa-feed
 
-        widget.Net(**base(bg='color3'), interface='wlp2s0'),
+        widget.Net(**base(bg='color3'),
+                #format="{down} {up}",
+                interface='wlp2s0'),
 
         powerline('color2', 'color3'),
 
@@ -112,6 +138,30 @@ def primary_widgets():
         powerline('dark', 'color1'),
 
         widget.Systray(background=colors['dark']),
+        
+        widget.PulseVolume(
+            **base(bg='dark', fg='light'),
+            fmt="墳 {}",
+            update_interval=0.1,
+            volume_app="pavucontrol",
+            step=5,
+            padding=5
+            ),
+
+        widget.Battery(
+            **base(bg='dark', fg='light'),
+            format="{char}{percent:2.0%}",
+            charge_char=" ",
+            discharge_char=" ",
+            empty_char=" ",
+            full_char=" ",
+            unknown_char=" ",
+            low_foreground=colors['urgent'],
+            low_percentage=0.15,
+            show_short_text=False,
+            notify_below=15,
+            padding=5,
+            ),
     ]
 
 

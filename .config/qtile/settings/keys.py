@@ -79,9 +79,10 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ Hardware Configs ------------
 
     # Audio
-    ([], "XF86AudioLowerVolume", lazy.spawn("pamixer --decrease 5")),
-    ([], "XF86AudioRaiseVolume", lazy.spawn("pamixer --increase 5")),
-    ([], "XF86AudioMute", lazy.spawn("pamixer --toggle-mute")),
+    # Controled by xfce4-volumed-pulse
+ #   ([], "XF86AudioLowerVolume", lazy.spawn("pamixer --decrease 5")),
+ #   ([], "XF86AudioRaiseVolume", lazy.spawn("pamixer --increase 5")),
+ #   ([], "XF86AudioMute", lazy.spawn("pamixer --toggle-mute")),
     ([], "XF86AudioPlay", lazy.spawn("playerctl play-pause")),
     ([], "XF86AudioStop", lazy.spawn("playerctl stop")),
     ([], "XF86AudioNext", lazy.spawn("playerctl next")),

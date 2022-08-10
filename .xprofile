@@ -1,10 +1,12 @@
 # Systray
-cbatticon &
+#cbatticon &
 nm-applet &
-volumeicon &
+xfce4-volumed-pulse & # Notification
+#volumeicon & # Icon
 xfce4-power-manager &
-blueberry-tray &
+#blueberry-tray &
 picom -b &
+
 #cpupower-gui profile Battery &
 
 # For laptops with separate numeric keyboard

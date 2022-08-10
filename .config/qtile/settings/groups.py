@@ -10,9 +10,7 @@ from .keys import mod, alt, keys
 # nf-fa-firefox, 
 # nf-fae-python, 
 # nf-dev-terminal, 
-# nf-fa-code, 
-# nf-oct-git_merge, 
-# nf-linux-docker,
+# nf-mdi-folder
 # nf-mdi-image, 
 # nf-mdi-layers
 

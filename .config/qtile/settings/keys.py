@@ -5,7 +5,6 @@ from libqtile.command import lazy
 
 
 mod = "mod4"
-alt = "mod1"
 
 keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ Window Configs ------------
@@ -20,8 +19,8 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod, "shift"], "f", lazy.layout.flip()),
 
     # Change window sizes
-    ([alt], "j", lazy.layout.shrink()),
-    ([alt], "k", lazy.layout.grow()),
+    ([mod, "control"], "j", lazy.layout.shrink()),
+    ([mod, "control"], "k", lazy.layout.grow()),
 
     # Toggle floating
     ([mod, "shift"], "space", lazy.window.toggle_floating()),

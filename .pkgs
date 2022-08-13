@@ -8,11 +8,8 @@ pamixer
 python-pip
 redshift
 starship
-neovim
-
-- Pip
-psutil
 
 - Paru
 nerd-fonts-ubuntu-mono
 xfce4-volumed-pulse
+nvim-packer-git

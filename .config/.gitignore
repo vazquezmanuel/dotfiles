@@ -5,6 +5,9 @@
 # Except for the files and folders we want to track
 !alacritty
 !bat
+!htop
+!lvim
+!ranger
 !qtile
 !fish
 !starship.toml

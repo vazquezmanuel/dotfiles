@@ -13,9 +13,6 @@ def base(fg='text', bg='dark'):
 def separator():
     return widget.Sep(**base(), linewidth=0, padding=5)
 
-def line():
-    return widget.Sep(**base(fg='grey'), linewidth=1, padding=5)
-
 
 def icon(fg='text', bg='dark', fontsize=16, text="?"):
     return widget.TextBox(
@@ -65,41 +62,11 @@ def workspaces(icon_fontsize=19, window_name_font_size=14):
     ]
 
 
-def system():
-    return [
-        icon(fg="color3", text=''), # Icon: nf-fa-download
-
-        # Do not activate in Virtualbox - will break qtile
-        widget.ThermalSensor(**base(fg='color3')),
-
-        line(),
-
-        widget.CPU(
-            **base(fg='color2'),
-            format=" {load_percent}%",
-            mouse_callbacks={
-                "Button1": lambda: qtile.cmd_spawn(my_term + " -e ytop"),
-            },
-            update_interval=1.0),
-        
-        line(),
-        
-        widget.Memory(
-            **base(fg='color1'),
-            format="﬙ {MemUsed:.0f} MB",
-            update_interval=1.0),
-
-        separator(),
-    ]
-
-
 def primary_widgets():
     return [
         *workspaces(),
 
         separator(),
-
-        *system(),
 
         powerline('color4', 'dark'),
 
@@ -117,10 +84,10 @@ def primary_widgets():
 
         powerline('color3', 'color4'),
 
+
         icon(bg="color3", text=' '),  # Icon: nf-fa-feed
 
         widget.Net(**base(bg='color3'),
-                #format="{down} {up}",
                 interface='wlp2s0'),
 
         powerline('color2', 'color3'),

@@ -8,8 +8,25 @@ pamixer
 python-pip
 redshift
 starship
+vlc
+geeqie
+darktable
+libreoffice-still
+inkscape
+
+
+ranger
+ueberzug
+neovim
+python-pip
+Rust
+nodejs
 
 - Paru
 nerd-fonts-ubuntu-mono
 xfce4-volumed-pulse
-nvim-packer-git
+davinci-resolve
+
+
+-others
+lvim

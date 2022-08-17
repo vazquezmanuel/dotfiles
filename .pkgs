@@ -13,12 +13,14 @@ geeqie
 darktable
 libreoffice-still
 inkscape
-
-
+texlive-most
+texlive-latexextra
+texlive-science
+zathura
+zathura-pdf-mupdf
 ranger
 ueberzug
 neovim
-python-pip
 Rust
 nodejs
 
@@ -26,7 +28,6 @@ nodejs
 nerd-fonts-ubuntu-mono
 xfce4-volumed-pulse
 davinci-resolve
-
 
 -others
 lvim

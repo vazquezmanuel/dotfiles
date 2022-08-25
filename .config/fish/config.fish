@@ -49,9 +49,6 @@ alias vim='lvim'
 alias nvim='lvim'
 alias rr='ranger'
 
-# zathura
-alias zathura='nohup zathura'
-
 # Changing "ls" to "exa"
 alias ls='exa -la --group-directories-first' # my preferred listing
 alias la='exa -a --group-directories-first'  # all files and dirs

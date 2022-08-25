@@ -12,10 +12,12 @@ vlc
 geeqie
 darktable
 libreoffice-still
+ltspice
 inkscape
 texlive-most
 texlive-latexextra
 texlive-science
+texlive-pictures
 zathura
 zathura-pdf-mupdf
 ranger
@@ -23,11 +25,17 @@ ueberzug
 neovim
 Rust
 nodejs
+xournalpp
+xf86-input-wacom
 
 - Paru
 nerd-fonts-ubuntu-mono
 xfce4-volumed-pulse
 davinci-resolve
+foxitreader
 
 -others
 lvim
+
+-Uninstall
+tlp

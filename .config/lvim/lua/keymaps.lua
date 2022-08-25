@@ -25,6 +25,7 @@ lvim.keys.insert_mode["kj"] = false
 
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings["sP"] = { "<cmd>Telescope projects<CR>", "Projects" }
+lvim.builtin.which_key.mappings["r"] = { "<cmd>RnvimrToggle<CR>", "Ranger" }
 
 require("better_escape").setup {
   mapping = { "jk" }, -- a table with mappings to use

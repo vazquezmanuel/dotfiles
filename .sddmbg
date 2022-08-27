@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Change "manuel" for your user name
+path="/home/manuel/Wallpapers/"
+sddmpath="/usr/share/sddm/themes/arcolinux-simplicity/images/background.jpg"
+file=$( ls $path | sort -R | tail -1 )
+wallpaper="$path/$file"
+cp $wallpaper $sddmpath

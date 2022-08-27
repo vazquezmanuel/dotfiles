@@ -1,19 +1,20 @@
 - Pacman
-brightnessctl
-cbatticon
-code
-exa
 fish
-pamixer
-python-pip
-redshift
+exa
 starship
+code
+neovim
+python-pip
+npm
+yarn
+rust
+redshift
 vlc
+pamixer
 geeqie
+inkscape
 darktable
 libreoffice-still
-ltspice
-inkscape
 texlive-most
 texlive-latexextra
 texlive-science
@@ -22,9 +23,6 @@ zathura
 zathura-pdf-mupdf
 ranger
 ueberzug
-neovim
-Rust
-nodejs
 xournalpp
 xf86-input-wacom
 
@@ -33,9 +31,16 @@ nerd-fonts-ubuntu-mono
 xfce4-volumed-pulse
 davinci-resolve
 foxitreader
+auto-cpufreq
+qucs-s
 
 -others
 lvim
 
 -Uninstall
 tlp
+
+-Not necessary
+brightnessctl
+cbatticon
+nodejs

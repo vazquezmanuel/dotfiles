@@ -19,8 +19,6 @@ texlive-most
 texlive-latexextra
 texlive-science
 texlive-pictures
-zathura
-zathura-pdf-mupdf
 ranger
 ueberzug
 xournalpp
@@ -32,6 +30,8 @@ xfce4-volumed-pulse
 davinci-resolve
 foxitreader
 auto-cpufreq
+sioyek
+zotero
 qucs-s
 
 -others

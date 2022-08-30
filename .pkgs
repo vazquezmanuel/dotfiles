@@ -4,6 +4,7 @@ exa
 starship
 code
 neovim
+miniconda3
 python-pip
 npm
 yarn

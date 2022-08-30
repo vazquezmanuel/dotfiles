@@ -14,7 +14,6 @@ pamixer
 geeqie
 inkscape
 darktable
-libreoffice-still
 texlive-most
 texlive-latexextra
 texlive-science
@@ -36,6 +35,14 @@ qucs-s
 
 -others
 lvim
+
+- Libre office
+pacman -S --needed ttf-caladea ttf-carlito ttf-dejavu ttf-liberation ttf-linux-libertine-g noto-fonts adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts
+paru -S ttf-gentium-basic hsqldb2-java
+pacman -S libreoffice-still
+sudo pacman -S libreoffice-extension-texmaths libreoffice-extension-writer2latex
+sudo pacman -S hunspell hunspell-es_mx hunspell-en_us
+paru -S libreoffice-extension-languagetool
 
 -Uninstall
 tlp

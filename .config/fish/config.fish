@@ -4,7 +4,7 @@
 # First line removes the path; second line sets it.  Without the first line,
 # your path gets massive and fish becomes very slow.
 set -e fish_user_paths
-set -U fish_user_paths $HOME/.local/bin $HOME/.cargo/bin /opt/miniconda3/bin $fish_user_paths
+set -U fish_user_paths $HOME/.local/bin $HOME/.cargo/bin $fish_user_paths
 
 ### EXPORT ###
 set fish_greeting                                 # Supresses fish's intro message
@@ -65,6 +65,9 @@ alias grep='grep --color=auto'
 
 # Better cat
 alias cat='bat --style=plain'
+
+# Conda
+alias conda='/opt/miniconda3/bin/conda'
 
 # Confirm before overwriting something
 alias cp="cp -i"

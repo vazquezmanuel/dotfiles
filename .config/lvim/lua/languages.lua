@@ -19,6 +19,7 @@ lvim.lsp.installer.setup.ensure_installed = {
   "jsonls",
   "sumeko_lua",
   "pyright",
+  "rust_analyzer",
   "texlab",
   "vimls",
 }

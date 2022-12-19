@@ -15,6 +15,8 @@ lvim.builtin.alpha.active = false
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
 lvim.builtin.treesitter.highlight.enabled = true
+lvim.builtin.bufferline.options.indicator_icon = nil
+lvim.builtin.bufferline.options.indicator = { style = "icon", icon = "▎" }
 
 -- LaTeX
 vim.g.tex_flavor = 'latex'

@@ -1,6 +1,7 @@
 -- keymappings [view all the defaults by pressing <leader>Lk or <leader>sk]
 lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+lvim.keys.normal_mode[","] = "$a;jk"
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.

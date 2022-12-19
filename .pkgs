@@ -4,11 +4,11 @@ exa
 starship
 code
 neovim
-miniconda3
 python-pip
 npm
 yarn
 rust
+rust-src
 redshift
 vlc
 pamixer
@@ -29,12 +29,11 @@ nerd-fonts-ubuntu-mono
 xfce4-volumed-pulse
 davinci-resolve
 foxitreader
+miniconda3
 auto-cpufreq
 sioyek
-zotero
-qucs-s
 
--others
+- Others
 lvim
 
 - Libre office
@@ -45,10 +44,10 @@ sudo pacman -S libreoffice-extension-texmaths libreoffice-extension-writer2latex
 sudo pacman -S hunspell hunspell-es_mx hunspell-en_us
 paru -S libreoffice-extension-languagetool
 
--Uninstall
+- Uninstall
 tlp
 
--Not necessary
+- Not necessary
 brightnessctl
 cbatticon
 nodejs

@@ -49,6 +49,9 @@ alias vim='lvim'
 alias nvim='lvim'
 alias rr='ranger'
 
+# Conda 
+alias conda-activate='eval /opt/anaconda/bin/conda "shell.fish" "hook" $argv | source'
+
 # Changing "ls" to "exa"
 alias ls='exa -la --group-directories-first' # my preferred listing
 alias la='exa -a --group-directories-first'  # all files and dirs
@@ -58,16 +61,13 @@ alias tree='exa -aT --group-directories-first' # tree listing
 # Pacman
 alias pacman='pacman --color auto'
 alias update='sudo pacman -Syyu'                # Refresh pkglist & update standard pkgs
-alias cleanup='sudo pacman -Rns (pacman -Qtdq)' # Remove orphaned packages
+alias cleanup='sudo pacman -Rns' # Remove orphaned packages
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 
 # Better cat
 alias cat='bat --style=plain'
-
-# Conda
-alias conda='/opt/miniconda3/bin/conda'
 
 # Confirm before overwriting something
 alias cp="cp -i"

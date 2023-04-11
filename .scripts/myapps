@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo pacman -S vlc kdenlive darktable audacity code texlive-most texlive-latexextra texlive-science texlive-pictures
+paru -S sioyek youtube youtube-music-bin firefox-gnome-theme-git

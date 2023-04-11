@@ -1,0 +1,17 @@
+# Systray
+nm-applet &
+picom &
+xfce4-volumed-pulse & # Notification
+xfce4-power-manager &
+
+# For laptops with separate numeric keyboard
+numlockx on &
+
+# GNOME PolicyKit authentication
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# Desktop notification
+/usr/lib/xfce4/notifyd/xfce4-notifyd &#!/bin/sh
+
+# Wallpaper
+~/.scripts/fehbg

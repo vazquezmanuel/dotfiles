@@ -1,0 +1,11 @@
+#!/bin/bash
+cd ~
+sudo pacman -S xfce4-dev-tools libkeybinder3
+git clone https://gitlab.xfce.org/apps/xfce4-volumed-pulse.git
+cd xfce4-volumed-pulse
+./autogen.sh
+./configure
+make
+sudo make install
+cd ~
+rm -rf xfce4-volumed-pulse

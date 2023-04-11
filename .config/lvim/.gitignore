@@ -1,0 +1,6 @@
+# Ignore everything
+/*
+
+# Except for the files and folders we want to track
+!.gitignore
+!config.lua

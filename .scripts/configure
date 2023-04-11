@@ -1,0 +1,31 @@
+#!/bin/bash
+cd ~
+
+# Create the backup directory
+mkdir .bak
+mkdir .bak/.config
+
+sudo pacman -S ttf-ubuntu-mono-nerd
+sudo pacman -S fish starship
+sudo pacman -S exa neovim redshift
+# Qtile
+mv .config/qtile .bak/.config/
+mv dotfiles/.config/qtile .config/
+# Autostart
+mv dotfiles/.xprofile .
+# Wallpapers
+mv .fehbg .bak/
+mv dotfiles/Wallpapers .
+mv dotfiles/.scripts .
+# Shell
+mv .bashrc .bak/
+mv .config/fish .bak/.config/
+mv dotfiles/.bashrc .
+mv dotfiles/.config/fish .config/
+# Better terminal
+mv .config/alacritty .bak/.config/
+mv .config/htop .bak/.config/
+mv dotfiles/.config/alacritty .config/
+mv dotfiles/.config/htop .config/
+mv dotfiles/.config/starship.toml .config/
+mv dotfiles/.config/bat .config/

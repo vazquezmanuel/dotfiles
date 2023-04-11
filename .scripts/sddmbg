@@ -1,0 +1,5 @@
+#!/bin/sh
+
+path="$HOME/Wallpapers/"
+sudo cp $path$( ls $path | sort -R | tail -1 ) "/usr/share/sddm/themes/sugar-candy/Backgrounds/Background.jpg"
+

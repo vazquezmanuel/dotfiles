@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Have a random wallpaper
+path="$HOME/Wallpapers/"
+feh --no-fehbg --bg-fill $path$( ls $path | sort -R | tail -1 ) &

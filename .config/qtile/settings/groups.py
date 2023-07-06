@@ -10,12 +10,12 @@ from .keys import mod, keys
 # nf-fa-firefox, 
 # nf-fae-python, 
 # nf-dev-terminal, 
-# nf-mdi-folder
-# nf-mdi-image, 
-# nf-mdi-layers
+# nf-custom-folder
+# nf-fa-image, 
+# nf-fae-layers
 
 groups = [Group(i) for i in [
-    "   ", "   ", "   ", "   ", "   ", "   ",
+    "   ", "   ", "   ", "   ", "   ", "  ",
 ]]
 
 for i, group in enumerate(groups):

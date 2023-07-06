@@ -3,7 +3,7 @@ from .theme import colors
 
 # Get the icons at https://www.nerdfonts.com/cheat-sheet (you need a Nerd Font)
 
-def base(fg='text', bg='dark'): 
+def base(fg='text', bg='dark'):
     return {
         'foreground': colors[fg],
         'background': colors[bg]
@@ -23,10 +23,10 @@ def icon(fg='text', bg='dark', fontsize=16, text="?"):
     )
 
 
-def powerline(fg="light", bg="dark", fontsize=37, padding=-3):
+def powerline(fg="light", bg="dark", fontsize=37, padding=0):
     return widget.TextBox(
         **base(fg, bg),
-        text="", # Icon: nf-oct-triangle_left
+        text="", # Icon: nf-cod-triangle_left
         fontsize=fontsize,
         padding=padding
     )
@@ -98,7 +98,7 @@ def primary_widgets():
 
         powerline('color1', 'color2'),
 
-        icon(bg="color1", text=' '), # Icon: nf-mdi-calendar_clock
+        icon(bg="color1", text='󰃰 '), # Icon: nf-md-calendar_clock
 
         widget.Clock(**base(bg='color1'), format='%d/%m/%Y - %H:%M '),
 
@@ -108,7 +108,7 @@ def primary_widgets():
         
         widget.PulseVolume(
             **base(bg='dark', fg='light'),
-            fmt="墳 {}",
+            fmt="󰕾 {}", # Icon: nf-md-volume-high
             update_interval=0.1,
             volume_app="pavucontrol",
             step=5,
@@ -117,12 +117,12 @@ def primary_widgets():
 
         widget.Battery(
             **base(bg='dark', fg='light'),
-            format="{char}{percent:2.0%}",
-            charge_char=" ",
-            discharge_char=" ",
-            empty_char=" ",
-            full_char=" ",
-            unknown_char=" ",
+            format="{char}{percent:1.0%}",
+            charge_char="󰢝 ", # Icon: nf-md-battery_charging_50
+            discharge_char="󰁾 ", # Icon: nf-md-battery_50
+            empty_char="󱃍 ", # Icon: nf-md-battery_alert_variant_outline
+            full_char="󰁹 ", # Icon: nf-md-battery
+            unknown_char="󰂑 ", # Icon: nf-md-battery_unknown
             low_foreground=colors['urgent'],
             low_percentage=0.15,
             show_short_text=False,

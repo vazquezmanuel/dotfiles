@@ -93,5 +93,10 @@ alias newtag='git tag -a'
 # Bare git repo alias for dotfiles
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
+# Python
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
+
 ### SETTING THE STARSHIP PROMPT ###
 starship init fish | source

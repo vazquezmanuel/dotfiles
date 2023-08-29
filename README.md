@@ -29,7 +29,7 @@ Actualmente, he tenido problemas descargando el programa [xfce4-volumed-pulse](h
 ~/.scripts/xfce4-volumed-pulse-install
 ```
 
-Listo, ahora tiene mis archivos de configuración, bastará con reinciar la computadora para que se vean aplicados todos los cambios, sin embargo, en está configuración tengo algunos comandos que requieren de determinadas aplicaciones (`ssn`, `sr` o `vim`, los cuales puedes modificar fácilmente en el archivo `~/.config/fish/config.fish`).
+Listo, ahora tiene mis archivos de configuración, bastará con reinciar la computadora para que se vean aplicados todos los cambios, sin embargo, en está configuración tengo algunos comandos que requieren de determinadas aplicaciones. 
 Cabe aclarar que la configuración de qtile fue tomada de [la configuración de Antonio Sarosi](https://github.com/antoniosarosi/dotfiles), recomiendo leer su documentación para conocer algunos comandos.
 
 ## Aplicaciones
@@ -37,11 +37,9 @@ Arcolinux B viene sin algunas aplicaciones necesarias para cualquier usuario, co
 
 ```
 sudo pacman -S vlc kdenlive darktable audacity
-sudo pacman -S code
+sudo pacman -S code brave-bin
 sudo pacman -S texlive-most texlive-latexextra texlive-science texlive-pictures
 paru -S sioyek
-paru -S youtube youtube-music-bin
-paru -S firefox-gnome-theme-git
 ```
 
 O ejecutar el comando `~/.scripts/myapps`.
@@ -59,6 +57,7 @@ mv dotfiles/.config/lvim .config/
 Para el manejo de versiones de python usaré pyenv, el cual se instala mediante
 ```
 sudo pacman -S pyenv
+sudo paru -S pyenv-virtualenv
 ```
 
 ## Personalizando las aplicaciones
@@ -70,9 +69,6 @@ Otro cambio que hice fue el instalar [sddm-sugar-candy](https://github.com/Kangi
 sudo cp ~/.scripts/theme.conf /usr/share/sddm/themes/sugar-candy/
 ~/.scripts/sddmbg
 ```
-
-Por último, personalice firefox con [firefox-gnome-theme](https://github.com/rafaelmardojai/firefox-gnome-theme) (ya se ha instalado con el script *myapps*).
-
 
 ## Fondos de pantallas
 

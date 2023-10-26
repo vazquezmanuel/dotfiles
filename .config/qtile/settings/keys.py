@@ -4,7 +4,7 @@ from libqtile.config import Key
 from libqtile.command import lazy
 
 
-mod = "mod4"
+mod = "mod1"  # mod4
 
 keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ Window Configs ------------
@@ -59,7 +59,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod, "shift"], "m", lazy.spawn("rofi -show")),
 
     # Browser
-    ([mod], "b", lazy.spawn("firefox")),
+    ([mod], "b", lazy.spawn("brave")),
 
     # File Explorer
     ([mod], "e", lazy.spawn("thunar")),

@@ -36,10 +36,10 @@ Cabe aclarar que la configuración de qtile fue tomada de [la configuración de 
 Arcolinux B viene sin algunas aplicaciones necesarias para cualquier usuario, como un visor de pdf, de audio, vídeo, etc. Mi recomendación es instalar lo siguiente:
 
 ```
-sudo pacman -S vlc kdenlive darktable audacity
-sudo pacman -S code brave-bin
-sudo pacman -S texlive-most texlive-latexextra texlive-science texlive-pictures
-paru -S sioyek
+sudo pacman -S vlc kdenlive darktable audacity code 
+sudo pacman -S texlive-most texlive-latexextra texlive-science texlive-pictures texlive-langspanish texlive-binextra
+paru -S zathura zathura-pdf-mupdf
+sudo pacman -S brave-bin
 ```
 
 O ejecutar el comando `~/.scripts/myapps`.

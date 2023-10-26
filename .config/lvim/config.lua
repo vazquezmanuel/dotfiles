@@ -152,7 +152,7 @@ lvim.colorscheme = "lunar"
 
 -- LaTeX
 vim.g.tex_flavor = 'latex'
-vim.g.vimtex_view_method = 'sioyek'
+vim.g.vimtex_view_method = 'zathura'
 vim.cmd([[
 let g:vimtex_compiler_latexmk = {
             \ 'build_dir' : 'Build',

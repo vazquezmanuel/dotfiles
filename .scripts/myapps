@@ -1,5 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S vlc kdenlive darktable audacity code texlive-most texlive-latexextra texlive-science texlive-pictures
-paru -S sioyek
+sudo pacman -S vlc kdenlive darktable audacity code 
+sudo pacman -S texlive-most texlive-latexextra texlive-science texlive-pictures texlive-langspanish texlive-binextra
+paru -S zathura zathura-pdf-mupdf
 sudo pacman -S brave-bin
